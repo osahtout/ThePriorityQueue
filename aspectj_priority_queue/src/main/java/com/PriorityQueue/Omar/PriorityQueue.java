@@ -13,26 +13,26 @@ public class PriorityQueue<el> implements Comparable<el>{
     private int maxSizeOfQueue, frontOfQueue, backOfQueue, key;
 
     private el[] queueArray;
-    private el elementType;
+  //  private el elementType;
 
 
     public PriorityQueue(int maxSizeOfQueue)
     {
         this.maxSizeOfQueue = maxSizeOfQueue;
-      //  this.queueArray = new el[maxSizeOfQueue];
+        this.queueArray = new el[maxSizeOfQueue];
     }
 
     public boolean add(el elementType, int key)
     {
 
-
+        //TODO
         return false;
     }
 
 
     public boolean isFull()
     {
-        if(sizeOfQueue + 1 == sizeOfQueue)
+        if(sizeOfQueue + 1 == sizeOfQueue)//TODO
             return true;
         else
             return false;
