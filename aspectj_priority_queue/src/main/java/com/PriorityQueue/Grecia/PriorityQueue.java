@@ -1,0 +1,22 @@
+package com.PriorityQueue.Grecia;
+/* The Priority Queue Interface defines the operations for a Priority Queue ADT. It contains the main functionality 
+   specified in the assignment requirements - the insert(el, key), remove() and min() methods. */
+public interface PriorityQueue<ElementType, KeyType extends Comparable<KeyType>> 
+{
+	/* All the methods declared in this interface are by default abstract (only method signature, no body). */
+	
+	/* The method insert(ElementType el, KeyType key) inserts the pair (el, key) into the Priority Queue. */
+	public void insert(ElementType el, KeyType key);
+		
+	/* The remove() removes and returns the element with the smallest key. */
+	public ElementType remove();
+
+	/* The min() method returns but does not remove the element with the smallest key. */
+	public ElementType min();
+	
+	/* The isEmpty() method returns true if the PriorityQueue has no elements. */
+	public boolean isEmpty();
+	
+	/* The isFull() method return true if the PriorityQueue is full. */
+	public boolean isFull();
+}
