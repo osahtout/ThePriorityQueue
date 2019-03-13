@@ -141,7 +141,6 @@ public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> impl
 	}
 
 	/* The remove() method removes and returns the element with the smallest key. */
-	@
 	public ElementType remove()
 	{
 		/* Calls the swap() method to swap the top of the heap with the element at the bottom of the heap. */ 

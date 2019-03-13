@@ -19,7 +19,7 @@ public class PriorityQueue<el> implements Comparable<el>{
     public PriorityQueue(int maxSizeOfQueue)
     {
         this.maxSizeOfQueue = maxSizeOfQueue;
-        this.queueArray = new el[maxSizeOfQueue];
+     //   this.queueArray = new el[maxSizeOfQueue];
     }
 
     public boolean add(el elementType, int key)
