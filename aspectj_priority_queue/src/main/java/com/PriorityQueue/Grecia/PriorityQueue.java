@@ -10,6 +10,7 @@
 public interface PriorityQueue<ElementType, KeyType extends Comparable<KeyType>> 
 {
 	/* All the methods declared in this interface are by default abstract (only method signature, no body). */
+	
 	/* The method insert(ElementType el, KeyType key) inserts the pair (el, key) into the Priority Queue. */
 	public void insert(ElementType el, KeyType key);
 	

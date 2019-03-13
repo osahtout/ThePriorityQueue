@@ -5,11 +5,6 @@
  * Omnia Gomaa ID: 40017116, Omar Sahtout ID: 40018126
  ******************************************************************************/
 
-import java.util.*;
-
-import be.ac.ua.ansymo.adbc.annotations.ensures;
-import be.ac.ua.ansymo.adbc.annotations.requires;
-
 /* The BinaryHeapPQ class is a Min-Heap implementation.*/
 public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> implements PriorityQueue<ElementType, KeyType>
 {	
@@ -20,7 +15,6 @@ public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> impl
 	
 	/* Constructs a new Binary Heap. */
 	@SuppressWarnings("unchecked")
-	@requires ({"capacity > 0"})
 	public BinaryHeapPQ(int capacity)
 	{
 		/* Sets the max. capacity. */
@@ -131,17 +125,6 @@ public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> impl
 	
 	/* Implementing methods from the Priority Queue Interface */
 	/* The insert(ElementType el, KeyType key) method inserts the pair (el, key). */
-	@requires 
-	({ 
-		"el != null", 
-		"key > 0", 
-		"$this.isFull() == false"
-	})
-	@ensures 
-	({ 
-		"$this.contains(el)",
-		"$this.getNumberOfElements() == $old($this.getNumberOfElements()) + 1"
-	})
 	public void insert(ElementType el, KeyType key) 
 	{
 		/* Stores the new pair at the bottom of the heap. */ 
@@ -153,17 +136,8 @@ public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> impl
 		/* Increases the heap size */
 		numberOfElements++;
 	}
-	
+
 	/* The remove() method removes and returns the element with the smallest key. */
-	@requires 
-	({
-		"$this.isEmpty() == false"
-	})
-	@ensures 
-	({
-		"$result != null",
-		"$this.getNumberOfElements() == $old($this.getNumberOfElements()) - 1"
-	})
 	public ElementType remove()
 	{
 		/* Calls the swap() method to swap the top of the heap with the element at the bottom of the heap. */ 
@@ -193,10 +167,6 @@ public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> impl
 	}
 		
 	/* The contains() method return true if an element is included in the elements array. */
-	@requires 
-	({
-		"el != null"
-	})
 	public boolean contains(ElementType el)
 	{
 		int count = numberOfElements;
@@ -220,9 +190,4 @@ public class BinaryHeapPQ<ElementType, KeyType extends Comparable<KeyType>> impl
 		for(int i = 0; i < elements.length; i++)
 			System.out.println(elements[i]);
 	}
-	
-	public String toString() {
-        return Arrays.toString(elements);
-	}
-	
 }
