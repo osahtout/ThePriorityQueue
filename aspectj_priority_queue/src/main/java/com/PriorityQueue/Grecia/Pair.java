@@ -1,4 +1,9 @@
-package com.PriorityQueue.Grecia;
+/*******************************************************************************
+ * SOEN 331
+ * Assignment #3
+ * Group Members: Grecia Olano O'Brien ID: 25372232, Moataz Fawzy ID: 27673817,
+ * Omnia Gomaa ID: 40017116, Omar Sahtout ID: 40018126
+ ******************************************************************************/
 
 /* MyPair provides a generic class for representing an Element and Key pair as per assignment specifications. */
 public class Pair<ElementType, KeyType> 
@@ -34,6 +39,6 @@ public class Pair<ElementType, KeyType>
     /* Returns the element and key information. */
     public String toString() 
     {
-        return "Element = " + getElement() + " , Key = " + getKey();
+        return "Element = " + getElement() + ", Key = " + getKey();
     }   
 }
